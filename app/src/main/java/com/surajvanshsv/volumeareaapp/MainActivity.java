@@ -1,6 +1,9 @@
 package com.surajvanshsv.volumeareaapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import androidx.activity.EdgeToEdge;
@@ -42,6 +45,15 @@ public class MainActivity extends AppCompatActivity {
         adapter = new MyCustomAdapter(getApplicationContext(),shapeArrayList);
         gridView.setAdapter(adapter);
         gridView.setNumColumns(2);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent in = new Intent(getApplicationContext(), sphere.class);
+                startActivity(in);
+            }
+        });
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
