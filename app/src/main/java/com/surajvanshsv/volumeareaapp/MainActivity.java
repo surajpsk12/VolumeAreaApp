@@ -58,12 +58,12 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         intent = new Intent(getApplicationContext(), CylinderActivity.class);
                         break;
-//                    case 2:
-//                        intent = new Intent(getApplicationContext(), CubeActivity.class);
-//                        break;
-//                    case 3:
-//                        intent = new Intent(getApplicationContext(), PrismActivity.class);
-//                        break;
+                    case 2:
+                        intent = new Intent(getApplicationContext(), CubeActivity.class);
+                        break;
+                    case 3:
+                        intent = new Intent(getApplicationContext(), PrismActivity.class);
+                        break;
                     default:
                         return;
                 }
