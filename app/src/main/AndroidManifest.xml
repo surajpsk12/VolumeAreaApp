@@ -15,6 +15,7 @@
         <activity
             android:name=".sphere"
             android:exported="false" />
+        <activity android:name=".CylinderActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

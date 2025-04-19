@@ -49,8 +49,26 @@ public class MainActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent in = new Intent(getApplicationContext(), sphere.class);
-                startActivity(in);
+                Intent intent;
+
+                switch (i) {
+                    case 0:
+                        intent = new Intent(getApplicationContext(), sphere.class);
+                        break;
+                    case 1:
+                        intent = new Intent(getApplicationContext(), CylinderActivity.class);
+                        break;
+//                    case 2:
+//                        intent = new Intent(getApplicationContext(), CubeActivity.class);
+//                        break;
+//                    case 3:
+//                        intent = new Intent(getApplicationContext(), PrismActivity.class);
+//                        break;
+                    default:
+                        return;
+                }
+
+                startActivity(intent);
             }
         });
 
